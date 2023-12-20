@@ -1,4 +1,4 @@
-package SoringOfStrings;
+package SortingOfStrings;
 
 import java.util.Arrays;
 import java.util.List;
