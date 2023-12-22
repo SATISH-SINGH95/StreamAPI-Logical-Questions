@@ -9,6 +9,11 @@ public class AveragOfNumbers {
 
         Double average = numbers.stream().mapToDouble(Integer::doubleValue).average().getAsDouble();
         System.out.println(average);
+
+        // -------------- OR ---------------------
+
+        double avg = numbers.stream().mapToDouble(n-> Double.valueOf(n)).average().getAsDouble();
+        System.out.println(avg);
     }
     
 }

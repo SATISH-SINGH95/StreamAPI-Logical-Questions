@@ -42,6 +42,18 @@ public class Numbers{
         // print third highest element
         Integer thirdHIghest = n.stream().sorted(Comparator.reverseOrder()).skip(2).findAny().get();
         System.out.println(thirdHIghest);
+
+        //------or------
+        Integer integer = n.stream().sorted((a,b)-> b-a).skip(2).findAny().get();
+        System.out.println(integer);
+        
+        // print descending order of given list of numbers
+        List<Integer> descendingOrder = n.stream().sorted((a,b)-> b-a).collect(Collectors.toList());
+        System.out.println(descendingOrder);
+
+        // print ascending order of given list of numbers
+        List<Integer> ascendingOrder = n.stream().sorted().collect(Collectors.toList());
+        System.out.println(ascendingOrder);
         
     }
 }
